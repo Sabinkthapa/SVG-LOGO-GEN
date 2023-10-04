@@ -11,7 +11,7 @@
   
   - [Installation](#Installation)
   - [Usage](#usage)
-  - [Features](#contributor)
+  - [Features](#features)
   - [Links](#links)
   - [credits](#credits)
   - [License](#license)
@@ -31,7 +31,7 @@
   4. Answer the series of questions for LOGO
   5. check the generated logo.svg in the browser
 
-    ## Features
+  ## Features
   - with user selection on the various choices like text input, color selection for shape and text and listed shapes , the application dynamically generates the SVG image 
   - It handles the error if the input is not correctly typed or other issue during the process of generating the SVG image
   - User can repeat the process and customize until they are satisfied with the particular logo.
@@ -39,8 +39,8 @@
   ## links
 
   - This is the link of my [Github repository](https://github.com/Sabinkthapa/SVG-LOGO-GEN)
-  - Test passed results screenshot ![SVG-LOGO-GEN] (/util/IMG/logo.svg)
-  -
+  - Test passed results screenshot ![SVG-LOGO-GEN] (/util/IMG/SVG-LOGO-GEN.svg)
+  - link to screencastify [screencastify] (https://drive.google.com/file/d/17IvR43ZS69rAtyTQ0GKF328X1_JrVx3r/view)
 
   ## Credits
   - Link of NPM documentation [NPM] (https://docs.npmjs.com/cli/v8/commands/npm-install)
@@ -49,8 +49,8 @@
   - Link of UNB course section [Unb course section](https://courses.bootcampspot.com)
 
   ## License
-   All resources provided by this project are avaiable for free use and distribution,subject to the term of  Apache license.
-  (c)Copyright 2023 Sabin
+   All resources provided by this project are available for free use and distribution,subject to the term of Apache license.
+                                                (c)Copyright 2023 Sabin
 
 
 

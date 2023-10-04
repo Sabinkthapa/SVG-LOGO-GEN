@@ -20,11 +20,11 @@ class SVG {
         const fontSize = 40; // change as per requirement
         const x = 80;
         const y = 80;
-        this.textElement = `<text x="${x}" y="${y}" font-size="${fontSize}" fill="${color} text-anchor='middle' alignment-baseline='middle'>${text}</text>`;
+        this.textElement = `<text x="${x}" y="${y}" font-size="${fontSize}" fill="${color}" text-anchor="middle" alignment-baseline="middle">${text}</text>`;
     }
 
-    setShapeElement(Shape) {
-        this.shapeElement =Shape.render();
+    setShapeElement(shape) {
+        this.shapeElement =shape.render();
     }
 }
 const questions = [
@@ -64,15 +64,22 @@ inquirer.prompt(questions)
 
     switch (shapeType) {
         case 'Circle':
-            svg.setShapeElement(new SVG.Circle(90, shapeColor)); 
+            svg.setShapeElement(new Circle(90, shapeColor)); 
             break;
         case 'Rectangle':
-            svg.setShapeElement(new SVG.Rectangle(90,90,shapeColor));
+            svg.setShapeElement(new Rectangle(200,200,shapeColor));
             break;
         case 'Square':
-            svg.setShapeElement(new SVG.square(200,200,shapeColor));
+            svg.setShapeElement(new Square(200,shapeColor));
             break;
     }
 
-})
+    fs.writeFile('logo.svg', svg.render(),(err) => {
+        if (err) {
+            console.log('Error saving logo.svg:', err);
+            return;
+        }
+        console.log('Logo.svg saved successfully');
+    });
+});
 

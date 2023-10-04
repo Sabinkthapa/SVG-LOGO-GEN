@@ -1,7 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-const {Circle,Square,rectangle} = require('./lib');
+const {Circle,Square,Rectangle} = require('./lib');
 
 class SVG {
     constructor() {
@@ -23,11 +23,10 @@ class SVG {
         this.textElement = `<text x="${x}" y="${y}" font-size="${fontSize}" fill="${color} text-anchor='middle' alignment-baseline='middle'>${text}</text>`;
     }
 
-    setShapeElement(shape) {
-        this.shapeElement =shape.render();
+    setShapeElement(Shape) {
+        this.shapeElement =Shape.render();
     }
 }
-
 const questions = [
     {
         type: 'input',
@@ -60,7 +59,8 @@ const questions = [
 inquirer.prompt(questions)
 .then(answers => {
     const { text, textColor, shapeType,shapeColor } = answers;
-    const svg = new SVG(text, textColor);
+    const svg = new SVG();
+    svg.setTextElement(text, textColor);
 
     switch (shapeType) {
         case 'Circle':
@@ -73,5 +73,6 @@ inquirer.prompt(questions)
             svg.setShapeElement(new SVG.square(200,200,shapeColor));
             break;
     }
+
 })
 

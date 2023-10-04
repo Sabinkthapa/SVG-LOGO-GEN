@@ -39,7 +39,7 @@
   ## links
 
   - This is the link of my [Github repository](https://github.com/Sabinkthapa/SVG-LOGO-GEN)
-  - Test passed results screenshot ![SVG-LOGO-GEN](/utils/IMAGE/SVG-LOGO-GEN.png)
+  - Test passed results screenshot ![SVG-LOGO-GEN](./utils/IMAGE/SVG-LOGO-GEN.png)
   - link to screencastify [screencastify] (https://drive.google.com/file/d/17IvR43ZS69rAtyTQ0GKF328X1_JrVx3r/view)
 
   ## Credits

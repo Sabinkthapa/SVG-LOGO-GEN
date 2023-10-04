@@ -1,3 +1,4 @@
+//imported node js module for file system and interactive command line prompts
 const fs = require("fs");
 const inquirer = require("inquirer");
 
@@ -28,7 +29,7 @@ class SVG {
     this.shapeElement = shape.render();
   }
 }
-const questions = [
+const questions = [ // array of questions to answer using inquirer module
   {
     type: "input",
     name: "text",
@@ -58,7 +59,7 @@ const questions = [
 ];
 
 inquirer.prompt(questions).then((answers) => {
-  const { text, textColor, shapeType, shapeColor } = answers;
+  const { text, textColor, shapeType, shapeColor } = answers; 
   const svg = new SVG();
   svg.setTextElement(text, textColor);
 
@@ -73,7 +74,7 @@ inquirer.prompt(questions).then((answers) => {
       svg.setShapeElement(new Square(100, shapeColor));
       break;
   }
-
+//fs.writeFile method to write the file
   fs.writeFile("logo.svg", svg.render(), (err) => {
     if (err) {
       console.log("Error saving logo.svg:", err);
